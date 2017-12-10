@@ -1,0 +1,39 @@
+.signin
+{
+	text-align: center;
+	color: blue;
+}
+.main
+{
+	text-align: center;
+	color: red;
+}
+.main.right
+{
+	text-align: center;
+}
+.buttons
+{
+	text-align: center;
+	color: orange;
+	background-color: white;
+}
+.second
+{
+	text-align: center;
+}
+.second2
+{
+	text-align: right;
+}
+@media screen and (min-width:500px){
+	.main1{
+		background: url(a.jpg);
+	}
+}
+@media screen and (max-width:500px)
+{
+	.main1{
+		background: url(b.jpg);
+	}
+}
