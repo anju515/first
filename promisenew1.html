@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	fetch("http://koushikmln.com:7500")
+	.then(
+		function(response){
+			if(response.status!==200){
+				console.log("Looks like there's an error.Status code="+response.status);
+				return;
+			}
+			response.text().then(data=>{
+				alert(data);
+			});
+		}
+	)
+	.catch(function(err){
+		console.log("Fetch error:",err);
+	});
+</script>
+</body>
+</html>

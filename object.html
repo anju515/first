@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	function Blog(id,title,imageUrl,content){
+		this.id=id;
+		this.title=title;
+		this.imageUrl=imageUrl;
+		this.content=content;
+		this.log=function(){
+		console.log(this);
+	}
+   }
+  var blog1=new Blog(1,"heading","http://google.com","i am supergirl");
+  blog1.log();
+  //assigning new variable body to the object blog1
+  blog1.body="bla bla";
+  //assigning new variable to class using prototype..accessible to all  objects
+  Blog.prototype.log1=function(){
+     console.log(this);
+  };
+  var blog2=new Blog(2,"hi","http://google.com","i am bat girl");
+  blog2.log1();
+</script>
+</body>
+</html>

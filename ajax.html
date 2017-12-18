@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<button onclick="loadDoc()">Load text</button>
+<div id="ajax">
+	</div>
+<form>
+	Username:
+	<input type="text" name="uname"id="uname">
+	Password:
+	<input type="password" name="psw" id="psw">
+</form>
+	<script type="text/javascript">
+		function loadDoc(){
+			var formdata={"username":"anjula"};
+			var xhttp=new XMLHttpRequest();
+			xhttp.onreadystatechange=function(){
+				if(this.readyState==4 &&this.status==200){
+					document.getElementById("ajax").innerHTML=this.responseText;
+				}
+			};
+	
+//var a=document.getElementById("uname").value;
+//var b=document.getElementById("psw").value;
+	//xhttp.open("GET","http://172.16.32.123:3000",true);
+	xhttp.open("GET","http://koushikmln.com:7500/get?username="+a+"&password="+b,true);
+	//xhttp.open("POST","http://172.16.32.123:3000/post",true);
+	//xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoder");
+	xhttp.setRequestHeader("Content-type","application/json");
+	xhttp.send();
+	//xhttp.send(JSON.stringify(formdata));
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	//function json(response){
+	//	return response.json;
+	//}
+	fetch("http://koushikmln.com:7500",{
+		method:post,
+		headers:{
+			"Content-type":"application/x-www-form-urlencoded"
+		},
+		body:username=abc&password=xyz
+	})
+	.then(response=>{return response.json()})
+	.then(function(data){
+		console.log("Request succeeded with json response",data);
+	})
+	.catch(function(error){
+		console.log("Request failed",error);
+	});
+</script>
+</body>
+</html>
